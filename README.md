@@ -97,7 +97,18 @@ The Arduino receives class index:
 ---
 
 
-## License
+Model weight License
 
 MIT License
 
+---
+
+Model weightModel weight
+
+Скачайте triplet_trash_resnet18.pt и dataset по ссылке: (https://drive.google.com/drive/folders/13SmipEHrVlTbdIMx2n5_CcGt8SHl3vJR?usp=sharing)
+
+Положите файл рядом с classifier.py.
+
+Download triplet_trash_resnet18.pt and dataset from: (https://drive.google.com/drive/folders/13SmipEHrVlTbdIMx2n5_CcGt8SHl3vJR?usp=sharing)
+
+Place it next to classifier.py.
