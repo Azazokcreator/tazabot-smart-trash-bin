@@ -11,7 +11,7 @@ import serial
 
 # ================== НАСТРОЙКИ ==================
 # Путь к папке с датасетом (те же metal/paper/plastic, что при обучении)
-DATA_ROOT = r"C:/Users/zvono/PycharmProjects/pythonProject8/dataset"
+DATA_ROOT = r"models/dataset"
 
 # Файл с обученной моделью (из train_triplet_trash.py)
 MODEL_PATH = "triplet_trash_resnet18.pt"
@@ -30,7 +30,7 @@ DIST_THRESHOLD = 0.8     # чем меньше — тем строже
 STABILITY_FRAMES = 5
 
 # --------- Настройки Serial для Arduino ---------
-SERIAL_PORT = "COM3"     # <-- ПОМЕНЯЙ на свой (например "COM4" или "/dev/ttyACM0")
+SERIAL_PORT = "COM3"    
 BAUDRATE = 115200
 ARDUINO_TIMEOUT = 1
 # ===============================================
@@ -190,7 +190,6 @@ def send_command(ser, cls_name):
     elif cls_name == "plastic":
         cmd = "L\n"
     else:
-        # если у тебя другие имена папок — подкорректируй здесь
         print(f"[ПРЕДУПР] Неизвестный класс для Arduino: {cls_name}")
         return
 
@@ -208,7 +207,6 @@ def arduino_request_ready(ser):
     Возвращает True/False.
     """
     if ser is None:
-        # если Arduino нет — считаем, что объект всегда есть (для отладки)
         return True
 
     try:
@@ -312,3 +310,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
